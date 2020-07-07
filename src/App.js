@@ -19,6 +19,7 @@ import FlatHolders from './user/flat-holders/pages/FlatHolders';
 import BankRecords from './bankRecords/pages/BankRecords';
 import ExpenditureRecords from './expenditureRecords/pages/ExpenditureRecords';
 import InvestorProfile from './user/investors/pages/InvestorProfile';
+import AllUsers from './user/AllUsers';
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -36,7 +37,10 @@ const App = () => {
   if (isLoggedIn) {
     routes = (
       <Switch>
-        <Route path="/" exact>
+      <Route path="/" exact>
+          <AllUsers></AllUsers>
+        </Route>
+        <Route path="/users" exact>
           <Users />
         </Route>
         <Route path="/investors" exact>

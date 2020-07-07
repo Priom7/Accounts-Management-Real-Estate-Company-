@@ -11,19 +11,9 @@ const NavLinks = props => {
     <ul className="nav-links">
       <li>
         <NavLink to="/" exact>
-          All Admins
+          People
         </NavLink>
       </li>
-      {auth.isLoggedIn && (
-        <li>
-          <NavLink to="/investors">All Investors</NavLink>
-        </li>
-      )}
-      {auth.isLoggedIn && (
-        <li>
-          <NavLink to="/flatholders">All Flat Holders</NavLink>
-        </li>
-      )}
       {auth.isLoggedIn && (
         <li>
           <NavLink to="/bankRecords">Bank Records</NavLink>
